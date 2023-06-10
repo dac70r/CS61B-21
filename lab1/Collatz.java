@@ -3,15 +3,14 @@
  */
 public class Collatz {
 
-    /** Buggy implementation of nextNumber! */
-    /** Description: */
+    /** Description: Implement Algorithm for Collatz sequence*/
     public static int nextNumber(int n) {
         if (n % 2 == 0) {
-            return n/2;
+            return n/2; // also handles the end case -> 2/2 = 1
         } else if (n % 2 == 1) {
             return 3 * n + 1;
         } else {
-            return n;
+            return n; // will not run this condition
         }
     }
 
@@ -22,7 +21,7 @@ public class Collatz {
             n = nextNumber(n);
             System.out.print(n + " ");
         }
-        System.out.println();
+        System.out.println(); // prints newline
     }
 }
 
